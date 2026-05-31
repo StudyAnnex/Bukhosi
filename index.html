@@ -81,6 +81,8 @@ nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 5%;d
 .quote-bar{background:var(--white);padding:3rem 5%;text-align:center;border-bottom:1px solid var(--border)}
 .quote-bar blockquote{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--ink);max-width:700px;margin:0 auto 0.75rem;line-height:1.5;font-style:italic}
 .quote-bar cite{font-size:0.82rem;color:var(--muted);font-style:normal;font-weight:500}
+.quote-bar cite{text-align:left}
+.quote-bar p{text-align:left;padding:0 21%;}
 
 /* SUBJECTS */
 .subjects-sec{padding:5rem 5%;background:var(--cream)}
@@ -249,11 +251,11 @@ nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 5%;d
 .tutor-reviewer{font-size:0.75rem;color:var(--faint);font-weight:400}
 
 /* TRUST */
-.trust-sec{padding:5rem 5%;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;background:var(--cream)}
+.trust-sec{padding:5rem 5%;display:grid;grid-template-columns:1.25fr 1fr;gap:2rem;align-items:center;background:var(--cream)}
 .trust-copy h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--ink);line-height:1.12;letter-spacing:-0.02em;margin-bottom:1.25rem}
 .trust-copy p{font-size:0.95rem;color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:1rem}
 .trust-copy p:last-of-type{margin-bottom:0}
-.trust-img{border-radius:12px;overflow:hidden;aspect-ratio:1;background:var(--cream-dark);border:1px solid var(--border)}
+.trust-img{border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--cream-dark);border:1px solid var(--border)}
 .trust-img img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* CAMP */
@@ -506,7 +508,7 @@ function closeMobileNav(){
   </div>
   <div class="hero-r">
     <div class="hero-img-wrap">
-      <img src="20260426_125550.jpg">
+      <img src="images/bukhosi gallery/IMG-20260524-WA0003.jpg">
     </div>
   </div>
 </section>
@@ -529,8 +531,9 @@ function closeMobileNav(){
 
 <!-- QUOTE -->
 <div class="quote-bar">
-  <blockquote>"Here i want to put a comment from a parent saying something positive about bukhosi so get them testimonials"</blockquote>
-  <cite>parent and kid's grade?!</cite>
+  <blockquote>"I appreciate the professionalism in communication and the dedication shown by the Bukhosi team. It's reassuring to know my child is receiving quality academic support."</blockquote>
+  <p><cite>— Parent</cite></p>
+  
 </div>
 
 <!-- SUBJECTS -->
@@ -586,7 +589,7 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
 <!-- ALT 1: About -->
 <section class="alt-sec white">
   <div class="alt-img">
-    <img src="brand-image-for-feature-1.svg">
+    <img src="images/bukhosi gallery/IMG-20260531-WA0074.jpg">
   </div>
   <div class="alt-copy">
     <h2>More than just getting through the work.</h2>
@@ -657,14 +660,14 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
     </div>
   </div>
   <div class="founder-photo">
-    <img src="images/tutor portraits/nkosi2.jpg" alt="Zenzo Nkosi, founder of Bukhosi Learning Hub">
+    <img src="images/tutor portraits/IMG-20260531-WA0009.jpg" alt="Zenzo Nkosi, founder of Bukhosi Learning Hub">
   </div>
 </section>
 
 <!-- ALT 2: Tutors quality -->
 <section class="alt-sec cream flip">
   <div class="alt-img">
-    <img src="brand-image-for-feature-4.svg">
+    <img src="images/bukhosi gallery/IMG-20260531-WA0077.jpg">
   </div>
   <div class="alt-copy">
     <h2>Tutors who actually know how to teach</h2>
@@ -701,8 +704,8 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
   <div class="tutors-heading">
     <h2>Meet the team</h2>
   </div>
-  <div class="tutors-fullwidth" style="aspect-ratio:21/7;position:relative;overflow:hidden;background:var(--cream-dark)">
-    <img src="welcometutoren_2024.jpg" style="width:100%;height:100%;object-fit:cover;display:block">
+  <div class="tutors-fullwidth" style="aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--cream-dark)">
+    <img src="images/tutor portraits/IMG-20260517-WA0006 - Copy.jpg" style="width:100%;height:100%;object-fit:cover;display:block">
     <div class="tutors-fullwidth-placeholder">
       <!--<i class="ti ti-camera" aria-hidden="true"></i>
       <span>Group photo of Bukhosi tutors: full width</span>-->
@@ -728,8 +731,8 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
             </div>
             <div class="tutor-card-body">
               <div class="tutor-name">Ms I. Fonoza</div>
-              <div class="tutor-subject">Mathematics Literacy · Life Sciences tutor</div>
-              <p class="tutor-review">"Wise words from the tutor"</p>
+              <div class="tutor-subject" style="font-style: bold">Mathematics Literacy · Life Sciences tutor</div>
+              <p class="tutor-review">"Grades reflect habits more than intelligence; study daily, think deeply, and let consistency be your greatest tutor"</p>
               <!--<div class="tutor-reviewer">Parent name or child</div>-->
             </div>
           </div>
@@ -738,12 +741,12 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
           <div class="tutor-card">
             <div class="tutor-card-photo">
               <!--<div class="tutor-backdrop shape-para"></div>-->
-              <img src="IMG-20260508-WA0025.jpg">
+              <img src="images/tutor portraits/lusiki.jpg">
             </div>
             <div class="tutor-card-body">
               <div class="tutor-name">Mr S Lusiki</div>
-              <div class="tutor-subject">Mathematics FET</div>
-              <p class="tutor-review">"Quote from tutor goes hereQuote from tutor goes here"</p>
+              <div class="tutor-subject" style="font-style: bold">Mathematics FET</div>
+              <p class="tutor-review">"Curiosity is where success begins."</p>
               <!--<div class="tutor-reviewer">Name of commenter</div>-->
             </div>
           </div>
@@ -752,12 +755,12 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
           <div class="tutor-card">
             <div class="tutor-card-photo">
               <!--<div class="tutor-backdrop shape-tri"></div>-->
-              <img src="IMG-20260508-WA0025.jpg">
+              <img src="images/tutor portraits/ntotho.jpg">
             </div>
             <div class="tutor-card-body">
               <div class="tutor-name">Ms N. Ntotho</div>
-              <div class="tutor-subject">Mathematics GET and Accounting</div>
-              <p class="tutor-review">"Comment from a learner or parent about this tutor goes here."</p>
+              <div class="tutor-subject" style="font-style: bold">Mathematics GET and Accounting</div>
+              <p class="tutor-review">"Every learner has potential. My mission is to help them see it, believe it, and achieve it."</p>
               <!--<div class="tutor-reviewer">Name of commenter</div>-->
             </div>
           </div>
@@ -766,12 +769,12 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
           <div class="tutor-card">
             <div class="tutor-card-photo">
               <!--<div class="tutor-backdrop shape-diamond"></div>-->
-              <img src="IMG-20260508-WA0025.jpg">
+              <img src="images/tutor portraits/lukongo.jpg">
             </div>
             <div class="tutor-card-body">
               <div class="tutor-name">Ms S. Lukongolo</div>
-              <div class="tutor-subject">Physical Sciences</div>
-              <p class="tutor-review">"Comment from a learner or parent about this tutor goes here."</p>
+              <div class="tutor-subject" style="font-style: bold">Physical Sciences</div>
+              <p class="tutor-review">"The more we understand the world around us, the more we understand our place within it"</p>
               <!--<div class="tutor-reviewer">Name of commenter</div>-->
             </div>
           </div>
@@ -780,12 +783,12 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
           <div class="tutor-card">
             <div class="tutor-card-photo">
               <!--<div class="tutor-backdrop shape-para-r"></div>-->
-              <img src="IMG-20260508-WA0025.jpg">
+              <img src="images/tutor portraits/nkosi.jpg">
             </div>
             <div class="tutor-card-body">
               <div class="tutor-name">Mr Z. Nkosi</div>
               <div class="tutor-subject">Technical Sciences tutor</div>
-              <p class="tutor-review">"Comment from a learner or parent about this tutor goes here."</p>
+              <p class="tutor-review">"I teach because I know what it feels like to doubt yourself and what it takes to rise beyond it."</p>
               <!--<div class="tutor-reviewer">Name of commenter</div>-->
             </div>
           </div>
@@ -858,7 +861,7 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
     <p>We work with serious learners. That means we're honest if a learner isn't putting in the effort between sessions, we'll tell you. Our job is results, and that only happens with commitment on both sides.</p>
   </div>
   <div class="trust-img">
-    <img src="brand-image-for-feature-2.svg">
+    <img src="images/bukhosi gallery/IMG-20260531-WA0150.jpg">
   </div>
 </section>
 
@@ -880,7 +883,7 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-visual">
-        <img src="busy-parent-2020.png">
+        <img src="images/bukhosi gallery/IMG-20260531-WA0085.jpg">
       </div>
       <div class="step-body">
         <h3>Register and choose your subjects</h3>
@@ -889,7 +892,7 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
     </div>
     <div class="step-card">
       <div class="step-visual">
-        <img src="tutorial-branded-2021.png">
+        <img src="images/bukhosi gallery/IMG-20260531-WA00767.jpg">
       </div>
       <div class="step-body">
         <h3>Attend sessions</h3>
@@ -898,7 +901,7 @@ document.getElementById('enrolBtn').addEventListener('click', function() {
     </div>
     <div class="step-card">
       <div class="step-visual">
-        <img src="LS pink semi circle 1.png.webp">
+        <img src="images/bukhosi gallery/IMG-20260531-WA0125.jpg">
       </div>
       <div class="step-body">
         <h3>Watch the results improve</h3>
