@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>Gallery — Bukhosi Learning Hub</title>
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,800;1,700;1,800&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F5F0E8;
+  --cream-dark:#EDE8DF;
+  --gold:#B8892A;
+  --gold-mid:#C9A84C;
+  --gold-pale:#FBF4E8;
+  --ink:#1A1614;
+  --muted:#5A5450;
+  --faint:#9A9390;
+  --border:#DDD8CE;
+  --white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;overflow-x:hidden}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{height:44px;width:auto;display:block}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text-top{font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);letter-spacing:0.04em;text-transform:uppercase}
+.logo-text-bottom{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:0.85rem;font-weight:400;color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{color:var(--ink);font-weight:600}
+.nav-right{display:flex;align-items:center;gap:0.75rem}
+.nav-ghost{background:transparent;border:none;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;color:var(--ink);cursor:pointer;padding:0.45rem 0.9rem}
+.nav-cta{background:var(--gold);color:var(--white);border:none;padding:0.5rem 1.25rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;transition:opacity 0.15s}
+.nav-cta:hover{opacity:0.88}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:1.5rem 5%;flex-direction:column;gap:0;z-index:99}
+.nav-mobile-menu.open{display:flex}
+.nav-mobile-menu a{font-size:1rem;color:var(--ink);text-decoration:none;font-weight:500;padding:0.85rem 0;border-bottom:1px solid var(--border)}
+.nav-mobile-menu a:last-child{border-bottom:none}
+.nav-mobile-cta{margin-top:1rem;background:var(--gold);color:var(--white);border:none;padding:0.85rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;width:100%;text-align:center}
+
+/* PAGE HEADER */
+.gallery-header{padding:5rem 5% 3rem;background:var(--cream);text-align:center}
+.gallery-header .eyebrow{font-size:0.7rem;font-weight:600;color:var(--gold);letter-spacing:0.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;margin-bottom:1rem}
+.gallery-header .eyebrow::before,.gallery-header .eyebrow::after{content:'';width:20px;height:1px;background:var(--gold)}
+.gallery-header h1{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;color:var(--ink);letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.75rem}
+.gallery-header p{font-size:1.05rem;color:var(--muted);font-weight:300;line-height:1.85;max-width:560px;margin:0 auto}
+
+/* CATEGORY SECTION */
+.cat-section{padding:4rem 5%;background:var(--cream)}
+.cat-section.alt{background:var(--white)}
+.cat-head{margin-bottom:2.5rem;display:flex;align-items:end;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cat-head-text .label{font-size:0.68rem;font-weight:600;color:var(--gold);letter-spacing:0.13em;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:0.6rem}
+.cat-head-text .label::before{content:'';width:18px;height:1px;background:var(--gold)}
+.cat-head-text h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;color:var(--ink);letter-spacing:-0.02em;line-height:1.1}
+.cat-head-text p{font-size:0.95rem;color:var(--muted);font-weight:300;margin-top:0.5rem;max-width:480px}
+.cat-count{font-size:0.78rem;color:var(--faint);font-weight:300;white-space:nowrap}
+
+/* MASONRY GRID — simple column-based */
+.gallery-grid{column-count:3;column-gap:1rem}
+.gallery-item{break-inside:avoid;margin-bottom:1rem;border-radius:8px;overflow:hidden;cursor:pointer;position:relative;background:var(--cream-dark);transition:transform 0.25s}
+.gallery-item:hover{transform:translateY(-2px)}
+.gallery-item img{width:100%;height:auto;display:block;object-fit:cover}
+.gallery-item .caption{position:absolute;left:0;right:0;bottom:0;padding:1rem 1.1rem 0.85rem;background:linear-gradient(to top,rgba(26,22,20,0.85) 0%,rgba(26,22,20,0) 100%);color:var(--white);font-size:0.82rem;font-weight:400;opacity:0;transition:opacity 0.2s}
+.gallery-item:hover .caption{opacity:1}
+
+/* VIDEO SECTION */
+.video-section{padding:5rem 5%;background:var(--ink);text-align:center}
+.video-section .eyebrow{font-size:0.7rem;font-weight:600;color:var(--gold-mid);letter-spacing:0.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;margin-bottom:1rem}
+.video-section .eyebrow::before,.video-section .eyebrow::after{content:'';width:20px;height:1px;background:var(--gold-mid)}
+.video-section h2{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.75rem}
+.video-section p.intro{font-size:1rem;color:rgba(255,255,255,0.65);font-weight:300;line-height:1.85;max-width:520px;margin:0 auto 3rem}
+.video-wrap{max-width:960px;margin:0 auto;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--cream-dark);position:relative;cursor:pointer}
+.video-wrap video{width:100%;height:100%;object-fit:cover;display:block}
+.video-wrap .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);transition:background 0.2s}
+.video-wrap:hover .play-overlay{background:rgba(0,0,0,0.15)}
+.video-wrap .play-btn{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;color:var(--ink);transition:transform 0.2s}
+.video-wrap:hover .play-btn{transform:scale(1.08)}
+.video-wrap .play-btn i{font-size:32px;margin-left:4px}
+.video-wrap.playing .play-overlay{display:none}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;align-items:center;justify-content:center;padding:2rem}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:92vw;max-height:80vh;object-fit:contain;border-radius:4px;display:block}
+.lightbox-caption{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.85);font-size:0.9rem;font-weight:300;text-align:center;max-width:80vw}
+.lightbox-close{position:absolute;top:1.25rem;right:1.5rem;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;color:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
+.lightbox-close:hover{background:rgba(255,255,255,0.2)}
+.lightbox-close i{font-size:22px}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.12);border:none;color:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
+.lightbox-nav:hover{background:rgba(255,255,255,0.22)}
+.lightbox-nav i{font-size:22px}
+.lightbox-prev{left:1.5rem}
+.lightbox-next{right:1.5rem}
+.lightbox-counter{position:absolute;top:1.5rem;left:1.5rem;color:rgba(255,255,255,0.5);font-size:0.82rem;font-weight:400}
+
+/* FOOTER */
+footer{background:var(--ink);padding:4rem 5% 2rem}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:2rem}
+.fbrand-name{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.75rem;display:block}
+.fbrand p{font-size:0.82rem;color:rgba(255,255,255,0.35);font-weight:300;line-height:1.85;max-width:220px}
+.fcol h4{font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.28);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
+.fcol a{display:block;font-size:0.82rem;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:0.5rem;font-weight:300;transition:color 0.15s}
+.fcol a:hover{color:var(--white)}
+.fci{display:flex;align-items:flex-start;gap:7px;font-size:0.82rem;color:rgba(255,255,255,0.45);font-weight:300;margin-bottom:0.6rem}
+.fci i{font-size:14px;color:var(--gold-mid);flex-shrink:0;margin-top:2px}
+.footer-btm{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.2)}
+.fsoc{display:flex;gap:0.6rem}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);text-decoration:none;transition:all 0.15s}
+.fsoc a:hover{border-color:var(--gold-mid);color:var(--gold-mid)}
+.fsoc a i{font-size:15px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .gallery-grid{column-count:2}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .nav-right{display:none}
+  .nav-hamburger{display:flex}
+  nav{padding:0 4%}
+  .gallery-header{padding:3rem 4% 2rem}
+  .cat-section{padding:3rem 4%}
+  .gallery-grid{column-count:2;column-gap:0.6rem}
+  .gallery-item{margin-bottom:0.6rem}
+  .gallery-item .caption{opacity:1;font-size:0.75rem;padding:0.85rem 0.85rem 0.7rem}
+  .video-section{padding:3.5rem 4%}
+  .video-wrap .play-btn{width:60px;height:60px}
+  .video-wrap .play-btn i{font-size:24px}
+  .lightbox{padding:1rem}
+  .lightbox-nav{width:40px;height:40px}
+  .lightbox-prev{left:0.5rem}
+  .lightbox-next{right:0.5rem}
+  .footer-top{grid-template-columns:1fr;gap:2rem;padding-bottom:2rem}
+  .footer-btm{flex-direction:column;align-items:flex-start;gap:0.75rem}
+}
+</style>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">
+    <img src="icon.png" alt="Bukhosi Learning Hub logo" class="logo-img">
+    <div class="logo-text">
+      <span class="logo-text-top">Bukhosi</span>
+      <span class="logo-text-bottom">Learning Hub</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#steps-sec-id">How it works</a>
+    <a href="index.html#subjects-sec-id">Subjects</a>
+    <a href="index.html#tutors-sec-id">Our tutors</a>
+    <a href="index.html#pricing-sec-id">Fees</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="https://wa.me/+27649883150" target="_blank">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a href="https://wa.me/+27649883150" target="_blank" style="text-decoration:none">
+      <button class="nav-ghost">WhatsApp us</button>
+    </a>
+    <a href="index.html#subjects-sec-id" style="text-decoration:none">
+      <button class="nav-cta">Join Bukhosi</button>
+    </a>
+  </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="index.html#steps-sec-id">How it works</a>
+  <a href="index.html#subjects-sec-id">Subjects</a>
+  <a href="index.html#tutors-sec-id">Our tutors</a>
+  <a href="index.html#pricing-sec-id">Fees</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="https://wa.me/+27649883150" target="_blank">Contact</a>
+  <a href="index.html#subjects-sec-id" style="text-decoration:none">
+    <button class="nav-mobile-cta">Join Bukhosi</button>
+  </a>
+</div>
+
+<!-- HEADER -->
+<section class="gallery-header">
+  <span class="eyebrow">Gallery</span>
+  <h1>The Bukhosi story, in pictures.</h1>
+  <p>Real tutors. Real learners. Real moments from inside the hub. Tap any photo to view it larger.</p>
+</section>
+
+<!-- OUR TUTORS -->
+<section class="cat-section" id="cat-tutors">
+  <div class="cat-head">
+    <div class="cat-head-text">
+      <div class="label">Category one</div>
+      <h2>Our tutors</h2>
+      <p>The people behind the results — the ones showing up week after week.</p>
+    </div>
+    <span class="cat-count">10 photos</span>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor name — Mathematics" alt="tutor portrait"><div class="caption">Tutor name — Mathematics</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor name — Physical Sciences" alt="tutor portrait"><div class="caption">Tutor name — Physical Sciences</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor name — Life Sciences" alt="tutor portrait"><div class="caption">Tutor name — Life Sciences</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor name — Accounting" alt="tutor portrait"><div class="caption">Tutor name — Accounting</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor name — Technical Maths" alt="tutor portrait"><div class="caption">Tutor name — Technical Maths</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor name — Technical Sciences" alt="tutor portrait"><div class="caption">Tutor name — Technical Sciences</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="The team — first day" alt="team photo"><div class="caption">The team — first day</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor briefing" alt="tutor briefing"><div class="caption">Tutor briefing</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Behind the scenes" alt="behind the scenes"><div class="caption">Behind the scenes</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Tutor candid" alt="candid"><div class="caption">Tutor candid</div></div>
+  </div>
+</section>
+
+<!-- OUR FOUNDER -->
+<section class="cat-section alt" id="cat-founder">
+  <div class="cat-head">
+    <div class="cat-head-text">
+      <div class="label">Category two</div>
+      <h2>Our founder</h2>
+      <p>The person who started it all.</p>
+    </div>
+    <span class="cat-count">4 photos</span>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Zenzo Nkosi — founder" alt="founder portrait"><div class="caption">Zenzo Nkosi — founder</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="In the office" alt="founder candid"><div class="caption">In the office</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="With the team" alt="founder with team"><div class="caption">With the team</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Building Bukhosi" alt="founder working"><div class="caption">Building Bukhosi</div></div>
+  </div>
+</section>
+
+<!-- SESSIONS IN ACTION -->
+<section class="cat-section" id="cat-sessions">
+  <div class="cat-head">
+    <div class="cat-head-text">
+      <div class="label">Category three</div>
+      <h2>Sessions in action</h2>
+      <p>What a typical week at Bukhosi actually looks like.</p>
+    </div>
+    <span class="cat-count">10 photos</span>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Mathematics session — Grade 11" alt="session"><div class="caption">Mathematics session — Grade 11</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Group problem-solving" alt="group work"><div class="caption">Group problem-solving</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="One-on-one help" alt="one on one"><div class="caption">One-on-one help</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Physical Sciences in action" alt="science session"><div class="caption">Physical Sciences in action</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Exam prep" alt="exam prep"><div class="caption">Exam prep</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="On the board" alt="working on board"><div class="caption">On the board</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Past papers session" alt="past papers"><div class="caption">Past papers session</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Learners at work" alt="learners studying"><div class="caption">Learners at work</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Discussion in progress" alt="discussion"><div class="caption">Discussion in progress</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Concentration" alt="concentration"><div class="caption">Concentration</div></div>
+  </div>
+</section>
+
+<!-- EVENTS / CAMPS -->
+<section class="cat-section alt" id="cat-events">
+  <div class="cat-head">
+    <div class="cat-head-text">
+      <div class="label">Category four</div>
+      <h2>Events &amp; camps</h2>
+      <p>The big moments — academic camps, milestones, celebrations.</p>
+    </div>
+    <span class="cat-count">8 photos</span>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Academic Camp — 2024" alt="camp"><div class="caption">Academic Camp — 2024</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Camp briefing" alt="briefing"><div class="caption">Camp briefing</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Group work at camp" alt="camp group"><div class="caption">Group work at camp</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Camp dinner" alt="dinner"><div class="caption">Camp dinner</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Celebrating results" alt="celebration"><div class="caption">Celebrating results</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Year-end gathering" alt="gathering"><div class="caption">Year-end gathering</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Awards moment" alt="awards"><div class="caption">Awards moment</div></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="" data-caption="Community day" alt="community"><div class="caption">Community day</div></div>
+  </div>
+</section>
+
+<!-- AROUND THE HUB — VIDEO -->
+<section class="video-section">
+  <span class="eyebrow">Category five</span>
+  <h2>Around the hub</h2>
+  <p class="intro">A short look at what happens day to day — the place, the people, the work.</p>
+  <div class="video-wrap" id="videoWrap" onclick="playVideo()">
+    <video id="aroundVideo" poster="" preload="metadata" playsinline>
+      <source src="around-the-hub.mp4" type="video/mp4">
+    </video>
+    <div class="play-overlay" id="playOverlay">
+      <div class="play-btn">
+        <i class="ti ti-player-play-filled"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <span class="lightbox-counter" id="lbCounter"></span>
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close"><i class="ti ti-x"></i></button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" aria-label="Previous"><i class="ti ti-arrow-left"></i></button>
+  <img class="lightbox-img" id="lbImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)" aria-label="Next"><i class="ti ti-arrow-right"></i></button>
+  <span class="lightbox-caption" id="lbCaption"></span>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="fbrand">
+      <span class="fbrand-name">Bukhosi Learning Hub</span>
+      <p>Empowering learners. Building leaders. Creating a legacy of excellence in Port Elizabeth.</p>
+    </div>
+    <div class="fcol">
+      <h4>Links</h4>
+      <a href="index.html">Home</a>
+      <a href="index.html#steps-sec-id">How it works</a>
+      <a href="index.html#subjects-sec-id">Subjects</a>
+      <a href="index.html#tutors-sec-id">Our tutors</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="https://wa.me/+27649883150" target="_blank">Contact</a>
+    </div>
+    <div class="fcol">
+      <h4>Subjects</h4>
+      <a href="index.html#subjects-sec-id">Mathematics</a>
+      <a href="index.html#subjects-sec-id">Physical Sciences</a>
+      <a href="index.html#subjects-sec-id">Life Sciences</a>
+      <a href="index.html#subjects-sec-id">Accounting</a>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <div class="fci"><i class="ti ti-phone"></i>+27 64 988 3150</div>
+      <div class="fci"><i class="ti ti-mail"></i>info@bukhosilearninghub.co.za</div>
+      <div class="fci"><i class="ti ti-map-pin"></i>Port Elizabeth, South Africa</div>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <span class="footer-copy">© 2025 Bukhosi Learning Hub. All rights reserved.</span>
+    <div class="fsoc">
+      <a href="#" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://wa.me/+27649883150" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// MOBILE NAV
+function toggleMobileNav(){
+  document.getElementById('navMobileMenu').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+
+// LIGHTBOX
+let allItems = [];
+let currentIdx = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+  allItems = Array.from(document.querySelectorAll('.gallery-item'));
+});
+
+function openLightbox(el){
+  currentIdx = allItems.indexOf(el);
+  showCurrent();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeLightboxOnBg(e){
+  if(e.target.id === 'lightbox') closeLightbox();
+}
+
+function navLightbox(dir){
+  currentIdx = (currentIdx + dir + allItems.length) % allItems.length;
+  showCurrent();
+}
+
+function showCurrent(){
+  const item = allItems[currentIdx];
+  const img = item.querySelector('img');
+  document.getElementById('lbImg').src = img.src;
+  document.getElementById('lbImg').alt = img.alt;
+  document.getElementById('lbCaption').textContent = img.dataset.caption || '';
+  document.getElementById('lbCounter').textContent = (currentIdx+1) + ' / ' + allItems.length;
+}
+
+// keyboard nav
+document.addEventListener('keydown', (e) => {
+  if(!document.getElementById('lightbox').classList.contains('open')) return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowLeft') navLightbox(-1);
+  if(e.key === 'ArrowRight') navLightbox(1);
+});
+
+// VIDEO
+function playVideo(){
+  const v = document.getElementById('aroundVideo');
+  const wrap = document.getElementById('videoWrap');
+  if(v.paused){
+    v.play();
+    v.controls = true;
+    wrap.classList.add('playing');
+  }
+}
+</script>
+
+</body>
+</html>
