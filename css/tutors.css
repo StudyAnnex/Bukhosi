@@ -1,0 +1,326 @@
+/**
+ * Tutors Section Styles
+ * Contains styles for the tutors carousel and cards
+ */
+
+.tutors-band {
+  background: var(--white);
+}
+
+.tutors-heading {
+  padding: 3.5rem 5% 2rem;
+}
+
+.tutors-heading h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.tutors-fullwidth {
+  width: 100%;
+  aspect-ratio: 21/7;
+  overflow: hidden;
+  background: var(--cream-dark);
+  display: block;
+  position: relative;
+}
+
+.tutors-fullwidth img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tutors-fullwidth-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  inset: 0;
+}
+
+.tutors-fullwidth-placeholder i {
+  font-size: 3rem;
+  color: var(--faint);
+}
+
+.tutors-fullwidth-placeholder span {
+  font-size: 0.85rem;
+  color: var(--faint);
+  letter-spacing: 0.04em;
+}
+
+.tutors-inner {
+  padding: 4rem 5%;
+}
+
+.tutors-inner h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.tutors-inner p.sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+/* Tutors Carousel */
+.tutors-grid {
+  position: relative;
+}
+
+.tutors-scroll-wrap {
+  overflow: hidden;
+  margin: 0 56px;
+}
+
+.tutors-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tutors-controls {
+  display: none;
+}
+
+.tutors-scroll-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.tutors-scroll-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.tutors-scroll-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.tutors-scroll-btn i {
+  font-size: 16px;
+}
+
+#tutorPrev {
+  left: 0;
+}
+
+#tutorNext {
+  right: 0;
+}
+
+.tutors-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.tutors-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: all 0.2s;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tutors-dot.active {
+  background: var(--gold);
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* Tutor Card */
+.tutor-card {
+  background: var(--cream);
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 0 0 calc(33.333% - 0.84rem);
+  min-width: 0;
+}
+
+.tutor-card-photo {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Tutor Card Photo Backdrops - Various Shapes */
+.tutor-backdrop.shape-circle {
+  position: absolute;
+  width: 90%;
+  height: 88%;
+  border-radius: 50%;
+  background: var(--gold-pale);
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tutor-backdrop.shape-para {
+  position: absolute;
+  width: 90%;
+  height: 82%;
+  background: #E4F2E1;
+  border-radius: 10px;
+  transform: translateX(-50%) rotate(-12deg);
+  bottom: -14%;
+  left: 50%;
+}
+
+.tutor-backdrop.shape-tri {
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  background: #E1EDF5;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tutor-backdrop.shape-diamond {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  background: #F5E6F0;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tutor-backdrop.shape-para-r {
+  position: absolute;
+  width: 90%;
+  height: 82%;
+  background: #E0F0EE;
+  border-radius: 10px;
+  transform: translateX(-50%) rotate(10deg);
+  bottom: -14%;
+  left: 50%;
+}
+
+.tutor-backdrop.shape-pill {
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  background: #EDE8F5;
+  border-radius: 50% 50% 0 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tutor-backdrop.shape-penta {
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  background: #F5EDE0;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tutor-card-photo img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 92%;
+  width: 69%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px 8px 0 0;
+}
+
+.tutor-card-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+  gap: 4px;
+}
+
+.tutor-card-photo-placeholder i {
+  font-size: 2rem;
+  color: var(--faint);
+}
+
+.tutor-card-photo-placeholder span {
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+
+.tutor-card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tutor-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.tutor-subject {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.tutor-review {
+  font-size: 0.83rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.tutor-reviewer {
+  font-size: 0.75rem;
+  color: var(--faint);
+  font-weight: 400;
+}

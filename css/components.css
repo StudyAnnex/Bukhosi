@@ -1,0 +1,56 @@
+/**
+ * Reusable Components
+ * Contains button styles and other reusable UI components
+ */
+
+/* Button Styles */
+.btn-dark {
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-dark:hover {
+  opacity: 0.88;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+  padding: 0.85rem 1.8rem;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-outline:hover {
+  border-color: var(--ink);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-gold:hover {
+  opacity: 0.9;
+}

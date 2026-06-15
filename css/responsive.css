@@ -1,0 +1,265 @@
+/**
+ * Responsive Media Queries
+ * Contains all responsive breakpoint styles
+ */
+
+/* ── TABLET: 900px ── */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 5%;
+  }
+
+  .hero-l {
+    padding-left: 0;
+  }
+
+  .hero-r {
+    max-width: 520px;
+    width: 100%;
+  }
+
+  .founder-sec {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3.5rem 5%;
+  }
+
+  .founder-photo {
+    aspect-ratio: 4/3;
+  }
+
+  .alt-sec {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3.5rem 5%;
+  }
+
+  .alt-sec.flip {
+    direction: ltr;
+  }
+
+  .trust-sec {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3.5rem 5%;
+  }
+
+  .camp-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .fees-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .tutors-scroll-wrap {
+    margin: 0 48px;
+  }
+
+  .tutor-card {
+    flex: 0 0 calc(50% - 0.625rem);
+  }
+}
+
+/* ── MOBILE: 600px ── */
+@media (max-width: 600px) {
+  /* Swap Desktop Hero for Mobile Hero */
+  .hero {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+
+  /* Quote Section */
+  .quote-bar {
+    padding: 2rem 4%;
+  }
+
+  .quote-bar blockquote {
+    font-size: 0.95rem;
+  }
+
+  /* Subjects Section */
+  .subjects-sec {
+    padding: 3rem 4%;
+  }
+
+  .subjects-sec h2 {
+    font-size: 1.8rem;
+  }
+
+  .subject-tags {
+    gap: 0.5rem;
+  }
+
+  .stag {
+    padding: 0.55rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  /* Founder Section */
+  .founder-sec {
+    padding: 3rem 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .founder-copy {
+    display: contents;
+  }
+
+  .founder-label {
+    order: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  .founder-copy h2 {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .founder-photo {
+    aspect-ratio: 4/3;
+    order: 2;
+    margin: 1.25rem 0;
+  }
+
+  .founder-welcome {
+    order: 3;
+    margin-bottom: 0.75rem;
+  }
+
+  .founder-copy p {
+    order: 4;
+    margin-bottom: 0.75rem;
+  }
+
+  .founder-signoff {
+    order: 5;
+    margin-top: 0.5rem;
+  }
+
+  /* Alternating Sections */
+  .alt-sec {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 4%;
+  }
+
+  .alt-sec.flip {
+    direction: ltr;
+  }
+
+  .alt-copy h2 {
+    font-size: 1.7rem;
+  }
+
+  /* Video Intro */
+  .video-intro {
+    min-height: 380px;
+  }
+
+  .video-intro-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .video-intro-content p {
+    font-size: 0.88rem;
+  }
+
+  /* Steps Section */
+  .steps-sec {
+    padding: 3rem 4%;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Tutors Section */
+  .tutors-heading {
+    padding: 2.5rem 4% 1.5rem;
+  }
+
+  .tutors-inner {
+    padding: 2rem 4% 3rem;
+  }
+
+  .tutors-scroll-wrap {
+    margin: 0 44px;
+  }
+
+  .tutor-card {
+    flex: 0 0 100%;
+  }
+
+  .tutors-scroll-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Trust Section */
+  .trust-sec {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 4%;
+  }
+
+  .trust-img {
+    aspect-ratio: 16/9;
+  }
+
+  /* Camp Section */
+  .camp-sec {
+    padding: 3rem 4%;
+  }
+
+  .camp-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .camp-price {
+    font-size: 2.4rem;
+  }
+
+  /* Fees Section */
+  .fees-sec {
+    padding: 3rem 4%;
+  }
+
+  .fees-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .fc-price {
+    font-size: 3rem;
+  }
+
+  /* CTA Section */
+  .cta-sec {
+    padding: 3.5rem 4%;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+  }
+
+  .cta-btns button {
+    width: 100%;
+  }
+}

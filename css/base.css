@@ -1,0 +1,29 @@
+/**
+ * Base Styles & Resets
+ * Contains global resets, base typography, and foundational styles
+ */
+
+/* Note: Fonts (Fraunces, DM Sans) and Tabler Icons are loaded via <link>
+   tags in each page's <head> for faster, non-blocking delivery. */
+
+/* Box Sizing Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Typography & Body */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}

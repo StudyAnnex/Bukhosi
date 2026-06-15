@@ -1,0 +1,385 @@
+/**
+ * Section Styles
+ * Contains styles for all major content sections
+ */
+
+/* Quote Bar Section */
+.quote-bar {
+  background: var(--white);
+  padding: 3rem 5%;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.quote-bar blockquote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  max-width: 700px;
+  margin: 0 auto 0.75rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.quote-bar cite {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+}
+
+.quote-bar p {
+  text-align: left;
+  padding: 0 21%;
+}
+
+/* Subjects Section */
+.subjects-sec {
+  padding: 5rem 5%;
+  background: var(--cream);
+}
+
+.subjects-sec h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.subjects-sec .sub-p {
+  text-align: center;
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+.subject-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.stag {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.stag:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-pale);
+}
+
+.stag.active {
+  border-color: var(--gold);
+  color: var(--white);
+  background: var(--gold);
+}
+
+.subject-enrol-wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subject-enrol-btn {
+  padding: 0.8rem 2.5rem;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+  background: var(--border);
+  color: var(--faint);
+  cursor: not-allowed;
+}
+
+.subject-enrol-btn.enabled {
+  background: var(--gold);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.subject-enrol-btn.enabled:hover {
+  opacity: 0.9;
+}
+
+.subject-enrol-hint {
+  font-size: 0.78rem;
+  color: var(--faint);
+  font-weight: 300;
+}
+
+/* Alternating Sections */
+.alt-sec {
+  padding: 5rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.alt-sec.white {
+  background: var(--white);
+}
+
+.alt-sec.cream {
+  background: var(--cream);
+}
+
+.alt-sec.flip {
+  direction: rtl;
+}
+
+.alt-sec.flip > * {
+  direction: ltr;
+}
+
+.alt-img {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+}
+
+.alt-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.alt-copy h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.alt-copy p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.alt-copy p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* Video Intro Section */
+.video-intro {
+  position: relative;
+  width: 100%;
+  min-height: 680px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-intro video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-intro-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 22, 20, 0.55);
+  z-index: 1;
+}
+
+.video-intro-content {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 5%;
+}
+
+.video-intro-content h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.video-intro-content p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.85;
+}
+
+/* Steps Section */
+.steps-sec {
+  padding: 5rem 5%;
+  background: var(--cream);
+}
+
+.steps-sec h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--ink);
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: var(--cream-dark);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.step-visual {
+  height: 220px;
+  overflow: hidden;
+  background: var(--cream-dark);
+}
+
+.step-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.step-body {
+  padding: 1.75rem;
+}
+
+.step-body h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+
+.step-body p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* Trust Section */
+.trust-sec {
+  padding: 5rem 5%;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: var(--cream);
+}
+
+.trust-copy h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.trust-copy p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.trust-copy p:last-of-type {
+  margin-bottom: 0;
+}
+
+.trust-img {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+}
+
+.trust-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CTA Section */
+.cta-sec {
+  padding: 5rem 5%;
+  background: var(--gold-pale);
+  border-top: 1px solid rgba(184, 137, 42, 0.2);
+  text-align: center;
+}
+
+.cta-sec h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.cta-sec p {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.85;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

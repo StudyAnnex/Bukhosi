@@ -1,0 +1,18 @@
+/**
+ * CSS Custom Properties (Variables)
+ * Contains all color definitions and design tokens
+ */
+
+:root {
+  /* Color Palette */
+  --cream: #F5F0E8;
+  --cream-dark: #EDE8DF;
+  --gold: #B8892A;
+  --gold-mid: #C9A84C;
+  --gold-pale: #FBF4E8;
+  --ink: #1A1614;
+  --muted: #5A5450;
+  --faint: #9A9390;
+  --border: #DDD8CE;
+  --white: #FFFFFF;
+}
